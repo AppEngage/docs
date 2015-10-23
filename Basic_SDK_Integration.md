@@ -58,3 +58,15 @@ public void onCreate(Bundle savedInstanceState) {
 }
 ```
 > **Note:** `AppEngage.engage(APPLICATION_CONTEXT)` should be called only once, either from `Application onCreate()` or from `Launcher Activity onCreate()`
+
+From `onResume()` of **each** Activity call `AppEngage.resume(ACTIVITY_CONTEXT)`:
+
+```java
+@Override
+public void onResume(){
+  super.onResume();
+  AppEngage.get().analytics().resume(this);
+}
+```
+
+From `onPause()` of **each** Activity call `AppEngage.pause(ACTIVITY_CONTEXT)`:
