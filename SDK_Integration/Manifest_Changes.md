@@ -1,4 +1,4 @@
-#### 1. Add following meta-data under manifest tag of your AndroidManifest.xml:
+#### 1. Add following meta-data under manifest tag of your `AndroidManifest.xml`:
 ```xml
 <meta-data
   android:name="com.appengage.sdk.android.project_number"
@@ -10,7 +10,7 @@
 > **NOTE:** Make sure to prefix `“YOUR_GCM_PROJECT_NUMBER”` with a `‘$’` sign.
 
 
-#### 2. Add following services under application tag of your AndroidManifest.xml:
+#### 2. Add following `services` under `application` tag of your `AndroidManifest.xml`:
 ```xml
 // required for event processing
 <service android:name="com.appengage.sdk.android.ExecutorService" /> 
@@ -20,7 +20,7 @@
 ```
 
 
-#### 3. Add following permissions under manifest tag:
+#### 3. Add following `permissions` under manifest tag:
 ```xml
 // required by AppEngage
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -31,7 +31,7 @@
 
 
 #### 4. GCM SETUP:
-> Before set-up, make sure to include Google Play Services in your project.
+> Before set-up, make sure to include `Google Play Services` in your project.
 (Refer: https://developers.google.com/android/guides/setup for more details)
 
 ##### 4.1. If GCM Registration for push messaging should be handled by AppEngage SDK, add following to your manifest:
@@ -63,7 +63,7 @@
       </intent-filter>
   </receiver>
   ```
-  > **NOTE:** Replace YOUR.PACKAGE.NAME with your package name
+  > **NOTE:** Replace `YOUR.PACKAGE.NAME` with your package name
   
   
 ##### 4.2. Else, if GCM Registration is already being handled by your app, or you plan to handle it yourself, add following to your manifest:
@@ -89,10 +89,10 @@
 
 
 #### 5. LOCATION TRACKING SET-UP:
-Add following meta-data under manifest tag of your AndroidManifest.xml:
+Add following meta-data under manifest tag of your `AndroidManifest.xml`:
 
 ```xml
-  // If AppEngage should enable location tracking, set it to true, otherwise set it to false. Default: TRUE
+  // If AppEngage should enable location tracking, set it to `true`, otherwise set it to `false`. `Default: TRUE`
   <meta-data
     android:name="com.appengage.sdk.android.location_tracking"
     android:value="true" />
@@ -105,7 +105,7 @@ Add following meta-data under manifest tag of your AndroidManifest.xml:
 ```
 
 
-#### 6. For AppEngage Attribution tracking, set-up an INSTALL-REFERRER:
+#### 6. For AppEngage `Attribution Tracking`, set-up an `INSTALL-REFERRER`:
 ```xml
 <receiver
   android:name="com.appengage.sdk.android.InstallTracker"
