@@ -1,1 +1,1 @@
-[Android Studio SDK Setup](sdk_setup.md)
+[SDK Setup](sdk_setup.md)
