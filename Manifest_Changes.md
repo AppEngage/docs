@@ -99,10 +99,20 @@ Add following meta-data under manifest tag of your AndroidManifest.xml:
 ```
 > If  above meta-data is set to true then add following permission under manifest tag of your
   `AndroidManifest.xml`:
+
 ```xml
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
 
 #### 6. For AppEngage Attribution tracking, set-up an INSTALL-REFERRER:
+```xml
+<receiver
+  android:name="com.appengage.sdk.android.InstallTracker"
+  android:exported="true">
+  <intent-filter>
+    <action android:name="com.android.vending.INSTALL_REFERRER" />
+  </intent-filter>
+</receiver>
+```
 
