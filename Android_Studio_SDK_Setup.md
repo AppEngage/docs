@@ -1,1 +1,1 @@
-**NOTE: ** AppEngage needs Google Play services and Android Support Library v4. 
+**NOTE:** AppEngage needs Google Play services and Android Support Library v4. 
