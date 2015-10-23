@@ -34,7 +34,7 @@
 > Before set-up, make sure to include Google Play Services in your project.
 (Refer: https://developers.google.com/android/guides/setup for more details)
 
-##### 1. If GCM Registration for push messaging should be handled by AppEngage SDK, add following to your manifest:
+##### 4.1. If GCM Registration for push messaging should be handled by AppEngage SDK, add following to your manifest:
   1. **meta-data**
   
   ```xml
@@ -66,7 +66,7 @@
   > **NOTE:** Replace YOUR.PACKAGE.NAME with your package name
   
   
-##### 2. Else, if GCM Registration is already being handled by your app, or you plan to handle it yourself, add following to your manifest:
+##### 4.2. Else, if GCM Registration is already being handled by your app, or you plan to handle it yourself, add following to your manifest:
   1. **meta-data**
   
   ```xml
