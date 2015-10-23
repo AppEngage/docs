@@ -8,7 +8,7 @@
 
 2. Choose `“import .JAR/.AAR Package”` and click `“Next”`
 
-3. Now locate the `AppEngage sdk .aar/.jar file` in the downloaded library in the `“File name”` field. Once located, the `“Subproject name”` should auto-populate. If not, just give it any name like “appengage” and click `“Finish”`. This is now imported as a module in your workspace. We will be referencing this in next step.
+3. Now locate the `AppEngage sdk .aar file` in the downloaded library in the `“File name”` field. Once located, the `“Subproject name”` should auto-populate. If not, just give it any name like “appengage” and click `“Finish”`. This is now imported as a module in your workspace. We will be referencing this in next step.
 
 4. Now its time to refer to this `module` in your application project. Click `File` -> `Project Structure`. `“appengagesdk”` should be visible as a module under `“Modules”` section. Select your application module from `“Modules”` section to which you want to integrate `AppEngage SDK` with. Click on `“Dependencies”` tab on the top right side of the screen. Click on `“+”` button to add a new dependency to your application module __(at bottom left)__
 
