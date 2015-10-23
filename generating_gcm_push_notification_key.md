@@ -1,7 +1,7 @@
 ### **Generating a GCM Push Notification Key**
 
 1. Create a new project at [https://console.developers.google.com/project](https://console.developers.google.com/project) for your app
-2. Go to this newly created `projects` page
+2. Go to this newly created `project` in `projects` page
 3. Expand top-left project section and notedown your project number. Keep this handy: ![Projects Section](http://s12.postimg.org/9gvkwuax9/Screen_Shot_2015_10_23_at_5_13_49_pm.png, "Expand to this")
 4. Choose `API's` from `APIs and auth` menu item from left section and click `Cloud Messaging for Android` under `Mobile API's` section from the right section
 5. Click on `Enable API`
