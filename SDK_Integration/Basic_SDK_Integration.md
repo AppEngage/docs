@@ -78,4 +78,4 @@ public void onResume(){
 }
 ```
 
-**NOTE:** Make sure to repeat above 2 steps(the onResume() and onPause()) for every other Activity in your application. This enables user session tracking and funnel generation for your app visitors.
+**NOTE:** Make sure to repeat above 2 steps(the `onResume()` and `onPause()`) for every other Activity in your application. This enables `user session tracking` and `funnel generation` for your app visitors.
