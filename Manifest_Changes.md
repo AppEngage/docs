@@ -7,6 +7,8 @@
   android:name="com.appengage.sdk.android.key"
   android:value="YOUR_APPENGAGE_KEY" />
 ```
+> **NOTE:** Make sure to prefix “YOUR_GCM_PROJECT_NUMBER” with a ‘$’ sign.
+
 #### 2. Add following services under application tag of your AndroidManifest.xml:
 #### 3. Add following permissions under manifest tag:
 #### 4. GCM SETUP:
