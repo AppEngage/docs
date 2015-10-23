@@ -13,10 +13,10 @@
 #### 2. Add following services under application tag of your AndroidManifest.xml:
 ```xml
 // required for event processing
-<service android:name="com.appengage.sdk.android.analytics.ExecutorService" /> 
+<service android:name="com.appengage.sdk.android.ExecutorService" /> 
 
 // required for event logging
-<service android:name="com.appengage.sdk.android.analytics.EventLogService" />
+<service android:name="com.appengage.sdk.android.EventLogService" />
 ```
 
 
