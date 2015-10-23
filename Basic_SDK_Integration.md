@@ -22,3 +22,39 @@ Now, In your Application's `onCreate()` method, register `AppEngageActivityLifeC
     }
   }
 ```
+
+#### 2. Manual
+Use this approach if you plan to target devices `below Android API level 14 also` ( >94% coverage as of August 2015)
+
+##### 2.1 If you don't have a custom Application class, and can create one, create an new Application class, and specify the name in your AndroidManifest.xml
+
+```xml
+  <application
+    android:name=".MyApplication"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/app_name">
+```
+
+Now, In your application's `onCreate()` method, integrate `AppEngage`:
+
+```java
+public class MyApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    // Integrate Localytics
+    AppEngage.engage(this);
+  }}
+```
+
+##### 2.2 In case you don’t plan to create a new Application class, follow these steps:
+From `onCreate()` of your `Launcher Activity` call `AppEngage.engage(APPLICATION_CONTEXT)`:
+
+```java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  AppEngage.engage(getApplicationContext());
+}
+```
+> **Note:** `AppEngage.engage(APPLICATION_CONTEXT)` should be called only once, either from `Application onCreate()` or from `Launcher Activity onCreate()`
