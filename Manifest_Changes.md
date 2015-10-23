@@ -30,9 +30,59 @@
 #### 4. GCM SETUP:
 > Before set-up, make sure to include Google Play Services in your project.
 (Refer: https://developers.google.com/android/guides/setup for more details)
-1. If GCM Registration for push messaging should be handled by AppEngage SDK, add following to your manifest:
-  1. **meta-data**
 
+##### 1. If GCM Registration for push messaging should be handled by AppEngage SDK, add following to your manifest:
+  1. **meta-data**
+  
+  ```xml
+  <meta-data
+    android:name="com.appengage.sdk.android.auto_gcm_registration"
+    android:value="true" /> 
+  ```
+  2. **permissions**
+  
+  ```xml
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <permission
+    android:name="YOUR.PACKAGE.NAME.permission.C2D_MESSAGE"
+    android:protectionLevel="signature" />
+  <uses-permission android:name="YOUR.PACKAGE.NAME.permission.C2D_MESSAGE" />
+  ```
+  3. **receiver**
+  
+  ```xml
+  <receiver android:name="com.appengage.sdk.android.AppEngageReceiver"
+    android:permission="com.google.android.c2dm.permission.SEND">
+    <intent-filter>
+      <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.appengage.sdk.android.intent.ACTION" />
+        <category android:name="YOUR.PACKAGE.NAME" />
+      </intent-filter>
+  </receiver>
+  ```
+  > **NOTE:** Replace YOUR.PACKAGE.NAME with your package name
+  
+  
+##### 2. Else, if GCM Registration is already being handled by your app, or you plan to handle it yourself, add following to your manifest:
+  1. **meta-data**
+  
+  ```xml
+  <meta-data
+    android:name="com.appengage.sdk.android.auto_gcm_registration"
+    android:value="false" /> 
+  ```
+
+  2. **receiver**
+  
+  ```xml
+  <receiver
+    android:name="com.appengage.sdk.android.AppEngageReceiver"
+    <intent-filter>
+      <action android:name="com.appengage.sdk.android.intent.ACTION" />
+      <category android:name="YOUR.PACKAGE.NAME" />
+    </intent-filter>
+  </receiver>
+  ```
 #### 5. LOCATION TRACKING SET-UP:
 #### 6. For AppEngage Attribution tracking, set-up an INSTALL-REFERRER:
 
