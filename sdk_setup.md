@@ -2,3 +2,4 @@
 2. [Android Studio SDK Setup](Android_Studio_SDK_Setup.md)
 3. [Manifest Changes](Manifest_Changes.md)
 4. [Basic SDK Integration](Basic_SDK_Integration.md)
+5. [Advanced SDK Integration](Advanced_SDK_Integration.md)
