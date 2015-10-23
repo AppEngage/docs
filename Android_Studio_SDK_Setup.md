@@ -12,7 +12,7 @@
 
 4. Now its time to refer to this `module` in your application project. Click `File` -> `Project Structure`. `“appengagesdk”` should be visible as a module under `“Modules”` section. Select your application module from `“Modules”` section to which you want to integrate `AppEngage SDK` with. Click on `“Dependencies”` tab on the top right side of the screen. Click on `“+”` button to add a new dependency to your application module __(at bottom left)__
 
-5. From the drop-down, choose “Module dependency” and select “:appengagesdk” module from the pop-up window and click “OK”.
+5. From the `drop-down`, choose `“Module dependency”` and select `“:appengagesdk”` module from the pop-up window and click `“OK”`.
 
-6. The AppEngage SDK setup is now complete. You can confirm it by looking at “build.gradle” of your app module. The AppEngage SDK should be listed as a dependency in “dependencies” section.
+6. The `AppEngage SDK` setup is now complete. You can confirm it by looking at `“build.gradle”` of your app module. The `AppEngage SDK` should be listed as a dependency in `“dependencies”` section.
 
