@@ -70,3 +70,12 @@ public void onResume(){
 ```
 
 From `onPause()` of **each** Activity call `AppEngage.pause(ACTIVITY_CONTEXT)`:
+
+```java
+public void onResume(){
+  super.onResume();
+  AppEngage.get().analytics().pause(this);
+}
+```
+
+**NOTE:** Make sure to repeat above 2 steps(the onResume() and onPause()) for every other Activity in your application. This enables user session tracking and funnel generation for your app visitors.
