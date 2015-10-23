@@ -9,6 +9,7 @@
 ```
 > **NOTE:** Make sure to prefix “YOUR_GCM_PROJECT_NUMBER” with a ‘$’ sign.
 
+
 #### 2. Add following services under application tag of your AndroidManifest.xml:
 ```xml
 // required for event processing
@@ -18,6 +19,7 @@
 <service android:name="com.appengage.sdk.android.analytics.EventLogService" />
 ```
 
+
 #### 3. Add following permissions under manifest tag:
 ```xml
 // required by AppEngage
@@ -26,6 +28,7 @@
 // optional,but highly recommended
 <uses-permission android:name="android.permission.WAKE_LOCK" />  
 ```
+
 
 #### 4. GCM SETUP:
 > Before set-up, make sure to include Google Play Services in your project.
@@ -83,6 +86,23 @@
     </intent-filter>
   </receiver>
   ```
+
+
 #### 5. LOCATION TRACKING SET-UP:
+Add following meta-data under manifest tag of your AndroidManifest.xml:
+
+```xml
+  // If AppEngage should enable location tracking, set it to true, otherwise set it to false. Default: TRUE
+  <meta-data
+    android:name="com.appengage.sdk.android.location_tracking"
+    android:value="true" />
+```
+> If  above meta-data is set to true then add following permission under manifest tag of your
+  `AndroidManifest.xml`:
+```xml
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```
+
+
 #### 6. For AppEngage Attribution tracking, set-up an INSTALL-REFERRER:
 
