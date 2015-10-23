@@ -15,4 +15,3 @@
 5. From the `drop-down`, choose `“Module dependency”` and select `“:appengagesdk”` module from the pop-up window and click `“OK”`.
 
 6. The `AppEngage SDK` setup is now complete. You can confirm it by looking at `“build.gradle”` of your app module. The `AppEngage SDK` should be listed as a dependency in `“dependencies”` section.
-
